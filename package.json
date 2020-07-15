@@ -2,7 +2,7 @@
   "name": "react-micro-front-end-hook",
   "version": "1.0.0",
   "description": "React Hook for accessing Micro-Front-End based components",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "npx nps start",
     "test": "npx nps test"
