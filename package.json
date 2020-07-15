@@ -1,0 +1,63 @@
+{
+  "name": "react-micro-front-end-hook",
+  "version": "1.0.0",
+  "description": "React Hook for accessing Micro-Front-End based components",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nps start",
+    "test": "npx nps test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rolfchen/react-micro-front-end-hook.git"
+  },
+  "keywords": [
+    "micro frontend",
+    "react"
+  ],
+  "author": "Rolf Chen <rolf@rolfchen.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rolfchen/react-micro-front-end-hook/issues"
+  },
+  "homepage": "https://github.com/Rolfchen/react-micro-front-end-hook#readme",
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "superagent": "^5.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@testing-library/react": "^10.4.6",
+    "@testing-library/react-hooks": "^3.3.0",
+    "@types/jest": "^26.0.4",
+    "@types/node": "^14.0.23",
+    "@types/react": "^16.9.43",
+    "@types/react-dom": "^16.9.8",
+    "@types/superagent": "^4.1.8",
+    "babel-jest": "^26.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "cross-env": "^7.0.2",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.1.0",
+    "nps-utils": "^1.7.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "superagent": "^5.3.1",
+    "ts-jest": "^26.1.2",
+    "ts-loader": "^8.0.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
