@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "sourceMap": true,
+    "rootDir": "src",
+    "outDir": "dist",
     "jsx": "react",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "declaration": true
   }
 }

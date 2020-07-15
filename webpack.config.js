@@ -5,8 +5,7 @@ module.exports = () => {
   const { NODE_ENV = "development" } = process.env;
   return {
     entry: {
-      index:
-        NODE_ENV === "development" ? "./demo/index.tsx" : "./src/index.tsx",
+      index: NODE_ENV === "development" ? "./demo/index.js" : "./src/index.tsx",
     },
     devServer: {
       port: 9004,
