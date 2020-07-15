@@ -1,6 +1,6 @@
 # React Micro Frontend Hook
 
-_v0.1.0_
+_v0.1.1_
 
 This component is designed to be used to import Micro Frontend libraries. To read more about Micro Frontends, have a read of the article by Martin Fowler:
 https://martinfowler.com/articles/micro-frontends.html.
