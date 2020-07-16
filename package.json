@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "React Hook for accessing Micro-Front-End based components",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "npx nps start",
     "test": "npx nps test"
