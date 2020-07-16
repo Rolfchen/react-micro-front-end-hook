@@ -70,10 +70,15 @@ exports.useMicroFrontEnd = function (mfeDomain, libName) {
         dispatch(microFrontEndHookActions_1.microFrontEndHookActions.setIsLoaded(true));
     };
     react_1.useEffect(function () {
-        window.addEventListener(Constants_1.EVENT_MFE_MOUNTED, handleMFEMounted);
+        if (window[libName]) {
+            dispatch(microFrontEndHookActions_1.microFrontEndHookActions.setIsLoaded(true));
+        }
+        else {
+            window.addEventListener(Constants_1.EVENT_MFE_MOUNTED, handleMFEMounted);
+        }
     }, []);
     react_1.useEffect(function () {
-        if (!isLoaded) {
+        if (!window[libName] && !isLoaded) {
             loadScripts(mfeDomain);
         }
     }, [isLoaded]);

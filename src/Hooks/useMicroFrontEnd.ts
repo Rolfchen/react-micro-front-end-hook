@@ -27,11 +27,16 @@ export const useMicroFrontEnd: UseMicroFrontEnd = (mfeDomain, libName) => {
   }
 
   useEffect(() => {
-    window.addEventListener(EVENT_MFE_MOUNTED, handleMFEMounted);
+    if (window[libName]) {
+      dispatch(Action.setIsLoaded(true));
+    }
+    else {
+      window.addEventListener(EVENT_MFE_MOUNTED, handleMFEMounted);
+    }
   }, []);
 
   useEffect(() => {
-    if (!isLoaded) {
+    if (!window[libName] && !isLoaded) {
       loadScripts(mfeDomain);
     }
   }, [isLoaded]);
@@ -119,7 +124,6 @@ export const useMicroFrontEnd: UseMicroFrontEnd = (mfeDomain, libName) => {
 
   const loadScripts = async (microUiDomain) => {
     const manifestUrl = `${microUiDomain}/components/manifest`;
-
     const response = await superagent.get(manifestUrl);
     const manifest = response.body;
     const entryScriptId = "main.js";
@@ -128,7 +132,6 @@ export const useMicroFrontEnd: UseMicroFrontEnd = (mfeDomain, libName) => {
       id: `${libName}-${entryScriptId}`,
       url: entryUrl
     }));
-
     const libDependencies = Object.entries<string>(manifest).reduce(
       (dependencyList, scriptEntry) => {
         const [id, path] = scriptEntry;
