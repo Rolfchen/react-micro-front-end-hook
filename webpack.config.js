@@ -5,7 +5,7 @@ module.exports = () => {
   const { NODE_ENV = "development" } = process.env;
   return {
     entry: {
-      index: NODE_ENV === "local" ? "./demo/index.js" : "./src/index.tsx",
+      index: NODE_ENV === "local" ? "./demo/index.jsx" : "./src/index.tsx",
     },
     devtool: "source-map",
     output: {
@@ -13,7 +13,7 @@ module.exports = () => {
       path: path.resolve(__dirname, "dist"),
     },
     devServer: {
-      port: 9004,
+      port: 9005,
       compress: true,
     },
     module: {

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { render } from "react-dom";
 import { useMicroFrontEnd } from "../src/Hooks/useMicroFrontEnd";
 
 const MicroFrontEndComponent = () => {
@@ -21,11 +20,4 @@ const MicroFrontEndComponent = () => {
   );
 };
 
-const appContainer = document.getElementById("root");
-
-render(
-  <div>
-    <MicroFrontEndComponent />
-  </div>,
-  appContainer
-);
+export default MicroFrontEndComponent;
