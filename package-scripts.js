@@ -13,14 +13,7 @@ module.exports = {
       default: "npx jest",
     },
     build: {
-      default: series(
-        rimraf("./dist"),
-        "cross-env NODE_ENV=production webpack --mode production"
-      ),
-      dev: series(
-        rimraf("./dist"),
-        "cross-env NODE_ENV=development webpack --mode development"
-      ),
+      default: series(rimraf("./dist"), "npx tsc"),
     },
   },
 };

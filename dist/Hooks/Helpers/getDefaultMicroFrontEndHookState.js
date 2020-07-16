@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.getDefaultMicroFrontEndHookState = void 0;
 exports.getDefaultMicroFrontEndHookState = function () { return ({
     isLoaded: false,
@@ -7,5 +7,5 @@ exports.getDefaultMicroFrontEndHookState = function () { return ({
     dependencies: null,
     dependencyQueue: null
 }); };
-exports["default"] = exports.getDefaultMicroFrontEndHookState;
+exports.default = exports.getDefaultMicroFrontEndHookState;
 //# sourceMappingURL=getDefaultMicroFrontEndHookState.js.map

@@ -56,7 +56,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.useMicroFrontEnd = void 0;
 var react_1 = require("react");
 var superagent_1 = __importDefault(require("superagent"));
@@ -147,7 +147,7 @@ exports.useMicroFrontEnd = function (mfeDomain, libName) {
             switch (_a.label) {
                 case 0:
                     manifestUrl = microUiDomain + "/components/manifest";
-                    return [4 /*yield*/, superagent_1["default"].get(manifestUrl)];
+                    return [4 /*yield*/, superagent_1.default.get(manifestUrl)];
                 case 1:
                     response = _a.sent();
                     manifest = response.body;
@@ -181,5 +181,5 @@ exports.useMicroFrontEnd = function (mfeDomain, libName) {
         renderComponentById: renderComponentById
     };
 };
-exports["default"] = exports.useMicroFrontEnd;
+exports.default = exports.useMicroFrontEnd;
 //# sourceMappingURL=useMicroFrontEnd.js.map

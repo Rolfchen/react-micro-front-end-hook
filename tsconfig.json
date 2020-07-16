@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "sourceMap": true,
+    "target": "ES5",
     "jsx": "react",
     "outDir": "dist",
     "declaration": true,
