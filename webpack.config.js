@@ -5,7 +5,12 @@ module.exports = () => {
   const { NODE_ENV = "development" } = process.env;
   return {
     entry: {
-      index: NODE_ENV === "development" ? "./demo/index.js" : "./src/index.tsx",
+      index: NODE_ENV === "local" ? "./demo/index.js" : "./src/index.tsx",
+    },
+    devtool: "source-map",
+    output: {
+      filename: "index.js",
+      path: path.resolve(__dirname, "dist"),
     },
     devServer: {
       port: 9004,
@@ -15,6 +20,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.(ts|tsx)$/,
+          exclude: /node_modules/,
           use: ["ts-loader"],
         },
         {
@@ -35,10 +41,10 @@ module.exports = () => {
       ],
     },
     resolve: {
-      extensions: [".ts", ".js", ".tsx"],
+      extensions: [".ts", ".js", ".tsx", ".jsx"],
     },
     plugins:
-      NODE_ENV && NODE_ENV != "production"
+      NODE_ENV && NODE_ENV === "local"
         ? [
             new HtmlWebPackPlugin({
               template: "./demo/index.html",

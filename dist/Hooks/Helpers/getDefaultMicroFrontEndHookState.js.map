@@ -1,0 +1,1 @@
+{"version":3,"file":"getDefaultMicroFrontEndHookState.js","sourceRoot":"","sources":["../../../src/Hooks/Helpers/getDefaultMicroFrontEndHookState.ts"],"names":[],"mappings":";;;AAGa,QAAA,gCAAgC,GAAqC,cAAM,OAAA,CAAC;IACvF,QAAQ,EAAE,KAAK;IACf,KAAK,EAAE,IAAI;IACX,YAAY,EAAE,IAAI;IAClB,eAAe,EAAE,IAAI;CACtB,CAAC,EALsF,CAKtF,CAAC;AAEH,qBAAe,wCAAgC,CAAC"}
