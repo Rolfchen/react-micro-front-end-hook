@@ -1,6 +1,6 @@
 # React Micro Frontend Hook
 
-_v0.1.1_
+_v0.1.3_
 
 This component is designed to be used to import Micro Frontend libraries. To read more about Micro Frontends, have a read of the article by Martin Fowler:
 https://martinfowler.com/articles/micro-frontends.html.
@@ -67,5 +67,18 @@ You can, however, structure it whatever way you like, provided it's named `rende
 More documentation will be added for the prerequisit of your MFE library.
 
 ## MFE Pre-requisits
+v0.1.3
+Your **Micro-Frontend** library is essentially a JavaScript that will get dynamically imported by the hook above. The script must have the following:
+* `manifest` - Accessed by {your_mfe_doman}/components/manifest. It should return data in **JSON** format with your main entry's key as **main.js**. The URL should be prefixed with a `/`. An example of the manifest looks like this:
+```json
+{
+  "main.js": "/main.bundle.a1234999ahjhlkj1i2.js", 
+  "vendor.js": "/vendor.bundle.a123412khjalkjh1l2kj3.js"
+}
+```
 
-TBA
+* Your main entry export should have two render functions: `renderComponent(componentName:string, ref: React.MutableRefObject<Element | null>, props?:any)` and `renderComponentById(componentName:string, id: string, props?:any)`. These function should be accessible as **umd**, or **window** object, so that it can be accessed by **window["MyLibrar"].renderComponent**
+
+* As mentioned before, your library should be exported as either `libraryTarget: "umd"` or `libratyTarget: "window"` if you using **webpack**. 
+
+In the future, I will try to make the MFE more flexible and friendly. BUT! In the meantime, you can check out [@Sackrin](https://github.com/sackrin), which would have library to help you build MicroUI libraries and a different useMicroUI hook. 
